@@ -6,6 +6,27 @@ public class BunjiMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
+    // Reference to the generated InputActions class
+    private PlayerControls controls;
+
+    void Awake()
+    {
+        // Initialize the input actions
+        controls = new PlayerControls();
+    }
+
+    void OnEnable()
+    {
+        // Enable the input actions
+        controls.Enable();
+    }
+
+    void OnDisable()
+    {
+        // Disable when object is inactive
+        controls.Disable();
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -13,8 +34,8 @@ public class BunjiMovement : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        // Read movement vector from the Input System
+        movement = controls.Gameplay.Move.ReadValue<Vector2>();
     }
 
     void FixedUpdate()
