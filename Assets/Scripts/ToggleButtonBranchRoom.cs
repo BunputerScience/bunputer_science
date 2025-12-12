@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class ToggleButton : MonoBehaviour
+public class ToggleButtonBranchRoom : MonoBehaviour
 {
     public bool isOn = false;
     public Color onColor = Color.green;
     public Color offColor = Color.red;
-
-    public LogicGateTile connectedGate;
-    public bool affectsInputA = true;
+    public GameObject LeftWallBranch;
+    public GameObject RightWallBranch;
+    
 
     private SpriteRenderer sr;
 
@@ -21,19 +21,26 @@ public class ToggleButton : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isOn = !isOn;
+            if(!isOn)
+            {
+                isOn = !isOn;
+            }
             UpdateColor();
 
-            if (connectedGate != null)
+            GameManager.Instance.firstRoomButtonPressed = true;
+            if (LeftWallBranch != null)
             {
-                if (affectsInputA) connectedGate.inputA = isOn;
-                else connectedGate.inputB = isOn;
-                connectedGate.EvaluateGate();
+                Destroy(LeftWallBranch);
+            }
+
+            if (RightWallBranch != null)
+            {
+                Destroy(RightWallBranch);
             }
         }
     }
 
-    void UpdateColor()
+        void UpdateColor()
     {
         if (sr != null)
             sr.color = isOn ? onColor : offColor;
