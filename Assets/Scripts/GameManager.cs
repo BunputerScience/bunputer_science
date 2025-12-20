@@ -1,10 +1,15 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: GameManager.cs
+ * Description: This class manages the game state and persists it across scenes.
+ */
+
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    // Example flags
     public bool firstRoomButtonPressed = false;
     public bool queuePuzzleSolved = false;
     public bool logicGateCleared = false;

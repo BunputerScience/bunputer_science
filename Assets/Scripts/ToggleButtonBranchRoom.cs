@@ -1,3 +1,12 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: ToggleButtonBranchRoom.cs
+ * Description: This class handles the toggle button functionality in the branch room.
+ * The branch room is the second room from the starting room. Pressing the button at the
+ * center of the room will open the left and right walls of the room, allowing the player to proceed
+ * by their preference of difficulty of puzzles.
+ */
+
 using UnityEngine;
 
 public class ToggleButtonBranchRoom : MonoBehaviour

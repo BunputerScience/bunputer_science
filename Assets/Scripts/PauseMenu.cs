@@ -1,3 +1,9 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: PauseMenu.cs
+ * Description: Handles the pause menu functionality.
+ */
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -37,6 +43,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
+    // When the player presses the pause button (esc), toggle the pause state.
     private void TogglePause()
     {
         if (GameIsPaused) Resume();

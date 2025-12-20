@@ -1,3 +1,8 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: BunjiMovement.cs
+ * Description: Handles the movement of the Bunji character using input actions.
+ */
 using UnityEngine;
 
 public class BunjiMovement : MonoBehaviour

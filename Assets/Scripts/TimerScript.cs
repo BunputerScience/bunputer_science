@@ -1,3 +1,9 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: TimerScript.cs
+ * Description: This class manages the game timer.
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;

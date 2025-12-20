@@ -1,3 +1,11 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: CameraController.cs
+ * Description: This script controls the movement of the camera in a 2D game.
+ * The camera can be moved to a new room by calling the MoveToRoom method with the center of the new room.
+ * The camera will move smoothly towards the target position at a constant speed.
+ * The camera will stop moving once it reaches the target position.
+ */
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {

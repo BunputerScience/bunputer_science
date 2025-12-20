@@ -1,3 +1,10 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: RoomEdgeTrigger.cs
+ * Description: This class handles the room edge trigger logic in the game.
+ * It moves the camera to a new room when the player collides with it.
+ */
+
 using UnityEngine;
 
 public class RoomEdgeTrigger : MonoBehaviour {

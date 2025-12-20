@@ -1,3 +1,9 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: ButtonConfirm
+ * Description: This class handles the button confirmation logic in the game. 
+ * It triggers the destruction of a wall if the connected logic gate evaluates to true.
+ */
 using UnityEngine;
 
 public class ButtonConfirm : MonoBehaviour

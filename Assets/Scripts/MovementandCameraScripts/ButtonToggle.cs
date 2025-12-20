@@ -1,3 +1,9 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: ButtonToggle.cs
+ * Description: Handles the button toggle functionality for the A and B circle
+ * buttons in each room.
+ */
 using UnityEngine;
 
 public class ButtonToggle : MonoBehaviour

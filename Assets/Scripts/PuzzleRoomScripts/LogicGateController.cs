@@ -1,3 +1,10 @@
+/*
+ * Author: Ichiro Miyasato
+ * File: LogicGateController.cs
+ * Description: This class controls the logic gates in the game.
+ * It evaluates the output of a logic gate based on its type and input values.
+ */
+
 using UnityEngine;
 
 public enum GateType { NOT, AND, OR, XOR, NAND, NOR, ONLYIF }
