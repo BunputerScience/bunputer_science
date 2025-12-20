@@ -1,7 +1,7 @@
 /*
  * Author: Ichiro Miyasato
  * File: TimerScript.cs
- * Description: This class manages the game timer.
+ * Description: This class manages the game timer and the flop mechanic that functions as the game over condition.
  */
 
 using UnityEngine;
