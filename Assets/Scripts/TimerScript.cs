@@ -13,11 +13,11 @@ public class TimerScript : MonoBehaviour
     public float timeRemaining = 120f; // total time in seconds
     public Text timerText;             // assign in Inspector
     private bool timerActive = false;
-    private bool isGameOver = false;
+    private bool isFlop = false;
 
     void Update()
     {
-        if (timerActive && !isGameOver)
+        if (timerActive && !isFlop)
         {
             if (timeRemaining > 0)
             {
@@ -27,7 +27,7 @@ public class TimerScript : MonoBehaviour
             else
             {
                 timeRemaining = 0;
-                GameOver();
+                TriggerFlop();
             }
         }
     }
@@ -44,10 +44,10 @@ public class TimerScript : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    void GameOver()
+    void TriggerFlop()
     {
-        isGameOver = true;
-        Debug.Log("Game Over!");
+        isFlop = true;
+        Debug.Log("FLOP!");
         //SceneManager.LoadScene("GameOverScene");
     }
 }
